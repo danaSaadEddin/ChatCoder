@@ -1,0 +1,191 @@
+:root{
+  --bgcolor : #D9D9D9;
+  --primary : #E5434E;
+  --pinkish : #FF97A0;
+  --secondary : #23196d;
+  --white: #fff;
+  --font : montserrat;
+
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.login-page{
+  position: relative;
+  margin: 0;
+  height: 100vh;
+  background: var(--primary);
+  background-image: url(images/bgwithpics.png);
+  background-size: cover;
+  background-position: center;
+}
+.login-wrapper{
+  position: absolute;
+  right: 33%;
+border-radius: 10px;
+  margin: 5% auto;
+  height: 70%;
+  width: 35%;
+  background-color: var(--white);
+}
+.login{
+
+  flex-direction: column;
+}
+.login h2 , .login h4{
+  color: var(--primary);
+}
+.login input , .login #sel1{
+  padding: 1%;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+}
+.login button{
+  margin: 0 auto;
+}
+
+.login a {
+ color: var(--primary);
+}
+.login a:hover {
+text-decoration: none;
+}
+
+/* ------------------------------MEDIA-QUERY------------------------------------------ */
+@media screen and (max-width: 787px) {
+  .login-page{
+      background-image: none;
+  }
+  .login-wrapper{ 
+    right: 15%;
+    margin: 5% auto;
+    height: 70%;
+    width: 66%;
+  }
+  .login h2 , .login h4{
+    font-size: 1.1em;
+}
+  .login button{
+      margin: 0 auto;
+  }
+  .dialogs .dialog h3{
+    font-size: .9em;
+   }
+
+}
+@media screen and (max-width: 787px) {
+  
+}
+
+/* chat app section style */
+
+.chat-app-page{
+  height: 100vh;
+  background-image: url(images/chat-bgedit.png);
+  background-size: cover;
+  text-transform: capitalize;
+}
+.content-wrapper{
+  border: 1px solid var(--primary);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* grid-gap: 1px; */
+  background-color: var(--white);
+  height: 90vh;
+  grid-template-rows: repeat(8, 1fr);
+}
+.username-wrapper{
+  border-bottom: 1px solid var(--primary);
+  color: var(--primary);
+  grid-column: 1/3;
+  grid-row: 1/2;
+  justify-content: space-between;
+}
+.dialogs{
+  flex-direction: column;
+  grid-column: 1/2;
+  grid-row: 2/9;
+  /* overflow-y: scroll; */
+  box-shadow: 1px 0px 1px var(--pinkish);
+}
+.dialogs .dialog{
+ background: var(--primary);
+}
+.dialogs .dialog:hover{
+  background: var(--pinkish);
+  cursor: pointer;
+ }
+ .dialogs button{
+   margin: 0 auto;
+ }
+.chats-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(9 , 1fr);
+  grid-column: 2/3;
+  grid-row: 2/9;
+}
+.new-chat-wrapper{
+  grid-column: 1/2;
+  grid-row: 1/9;
+  overflow-y: scroll;
+  overflow-x: none;
+}
+.new-chat{
+  text-transform: initial; 
+}
+.new-chat-right{
+  text-align: right; 
+  text-transform: initial; 
+}
+.new-chat .left{
+  background-color: var(--bgcolor);
+  box-shadow: 1px 2px 3px var(--bgcolor);
+ display: inline-block;
+ border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px; 
+
+}
+.new-chat-right .right{
+  background: var(--pinkish);
+ box-shadow: 1px 2px 3px var(--pinkish);
+  display: inline-block;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px; 
+ }
+
+.send-msg{
+  grid-column: 1/2;
+  grid-row: 9/10;
+  padding: 1%;
+  position: relative;
+}
+.chats-wrapper .msg{
+  padding: 1%;
+  border-radius: 20px;
+  border: 1px solid var(--primary);
+}
+.chats-wrapper .fa{
+  font-size: 1.4em;
+  position: absolute;
+  top: 29%;
+  right: 13%;
+  background: var(--primary);
+  border-radius: 50%;
+  color: var(--white);
+}
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color: var(--bgcolor);
+}
+::-webkit-scrollbar-track{
+  border-radius: 10px;
+  background-color: var(--white);
+}

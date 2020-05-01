@@ -1,0 +1,127 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chat Coders</title>
+</head>
+
+<body>
+
+    <!-- login section -->
+    <div class="login-page mt-0">
+        <div class="container">
+            <div class="login-wrapper rounded form-group">
+                <form class="d-flex text-center my-5 rounded login">
+                    <h4 class="mt-5">WELCOME!</h4>
+                    <h2 class="my-2">TO CHAT CODERS</h2>
+                    <input type="text" class="username my-3 w-75" id="username" placeholder="username" required>
+                    <!-- <label for="sel1">Select list:</label> -->
+                    <select class="form-control my-3 w-75" id="sel1" name="sel1">
+                        <option value="lightmode">light mode</option>
+                        <option value="darkmode">dark mode</option>
+                    </select>
+                    <button class="btn btn-outline-danger w-25 my-4"> OK </button>
+                    <a href="#chat-app-ui"> check out room </a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- chat app ui -->
+    <div class="chat-app-page">
+        <div class="container">
+            <div class="content-wrapper d-grid mt-5">
+                <div class="username-wrapper d-flex p-4">
+                    <h4></h4>
+                    <i class="fa fa-ellipsis-h"></i>
+                </div>
+                <div class="dialogs d-flex">
+                    <div class="dialog text-center text-white py-3">
+                        <h3 id="javascript">javascript</h3>
+                    </div>
+                    <div class="dialog text-center text-white py-3">
+                        <h3 id="react">react</h3>
+                    </div>
+                    <div class="dialog text-center text-white py-3">
+                        <h3 id="babel">babel</h3>
+                    </div>
+                    <div class="dialog text-center text-white py-3">
+                        <h3 id="node.js">node.js</h3>
+                    </div>
+                    <div class="dialog text-center text-white py-3">
+                        <h3 id="firebase">firebase</h3>
+                    </div>
+                    <div class="dialog text-center text-white py-3">
+                        <h3 id="redux">redux</h3>
+                    </div>
+
+                    <div class="dialog text-center text-white py-3">
+                        <h3 id="bootstrap">bootstrap</h3>
+                    </div>
+                    <!-- <button class="btn btn-danger my-4 w-50 justify-content-center">
+                        <i class="fa fa-plus-circle"></i>add new
+                    </button> -->
+                </div>
+                <div class="chats-wrapper">
+                    <div class="new-chat-wrapper">
+                        <div class="new-chat">
+                            <!-- <h6 class="left p-1 m-2"> <small class="d-block text-muted mt-0">user</small>
+                                hey there i want to tell you s.th important <small
+                                    class="d-block text-muted mt-2 text-right"> 3
+                                    minutes ago</small>
+                            </h6> -->
+                        </div>
+                    </div>
+                    <div class="send-msg">
+                        <form class="send d-flex justify-content-center">
+                            <input type="text" class="msg my-3 w-75" id="msg">
+                            <i class="fa fa-paper-plane p-2" id="chat-app-ui"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBGoZE8zSWqGlYDgIhMWz2V8r3-kGBGOqo",
+            authDomain: "test-7f387.firebaseapp.com",
+            databaseURL: "https://test-7f387.firebaseio.com",
+            projectId: "test-7f387",
+            storageBucket: "test-7f387.appspot.com",
+            messagingSenderId: "786098520269",
+            appId: "1:786098520269:web:72c0d7f7061b3d38a7a984",
+            measurementId: "G-QNQD277VVJ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
+    <script src="scripts/chat.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
